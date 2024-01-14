@@ -3,7 +3,7 @@
 ### Getting Started 
 1. Clone the repository.
 ```
-git clone https://github.com/Kornkanokdevweb/PRIMO-Pre-test](https://github.com/poppymint016/cryptocurrency)
+git clone https://github.com/poppymint016/cryptocurrency
 ```
 3. Install the required dependencies using 
 ```
