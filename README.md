@@ -2,10 +2,24 @@
 
 ### Getting Started 
 1. Clone the repository.
-2. Install the required dependencies using **npm install**.
-3. Install **npm install bcrypt** & Import data seed using **node seed.js**
-4. Start the development server using **npm start**
-
+```
+git clone https://github.com/Kornkanokdevweb/PRIMO-Pre-test](https://github.com/poppymint016/cryptocurrency)
+```
+3. Install the required dependencies using 
+```
+npm install
+```
+5. Install bcrypt & Import data seed using 
+```
+npm install bcrypt
+```
+```
+node seed.js
+```
+7. Start the development server using 
+```
+npm start
+```
 ### Database Structure
 #### User ผู้ใช้ระบบ
 - userID
