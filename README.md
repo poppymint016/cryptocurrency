@@ -1,25 +1,25 @@
-#### Cryptocurrencies Project
+## Cryptocurrencies Project
 
-## Getting Started 
+### Getting Started 
 1. Clone the repository.
 2. Install the required dependencies using **npm install**.
 3. Install **npm install bcrypt** & Import data seed using **node seed.js**
 4. Start the development server using **npm start**
 
-## Database Structure
-# User ผู้ใช้ระบบ
+### Database Structure
+#### User ผู้ใช้ระบบ
 - userID
 - username
 - email
 - password
-# Wallet วอลเล็ตของผู้ใช้
+#### Wallet วอลเล็ตของผู้ใช้
 - WalletID
 - userID (Foreign Key references User table)
 - balance
-# Cryptocurrency คริปโตเคอร์เรนซี
+#### Cryptocurrency คริปโตเคอร์เรนซี
 - name (e.g., BTC, ETH, XRP, DOGE)
 - currentPrice
-# Transaction รายการซื้อ-ขาย
+#### Transaction รายการซื้อ-ขาย
 - userID (Foreign Key references User table)
 - receiverID (Foreign Key references User table)
 - cryptoID (Foreign Key references Cryptocurrency table)
@@ -27,16 +27,16 @@
 - amount
 - timestamp
 
-## API Structure
+### API Structure
 **เงื่อนไข** ผู้ใช้จะต้องทำการสร้างบัญชีก่อนและทำการเข้าสู่ระบบเพื่อรับค่า token  จากนั้นเติมเงินเข้าสู่ wallet เพื่อทำการซื้อ ขาย และแลกเปลี่ยน 
-# User registration and authentication 
+#### User registration and authentication 
 1. User Registration
     - Method Post /api/register
     - ลงทะเบียนเข้าสู่ระบบ
 2. User Login
     - Method Post /api/login
     - เข้าสู่ระบบ
-# Wallet
+#### Wallet
 เมื่อต้องการฝากเงินจะต้องกรอก Headers: **x-access-token** และกรอก token จาก register หรือ login ก่อนเทส API
 1. Deposit wallet
     - Method Post /api/createWallet
@@ -44,7 +44,7 @@
 2. Balance Wallet
     - Method GET /api/getUserWallet
     - เช็คยอดเงินคงเหลือใน wallet
-# Manage Cryptocurrency
+#### Manage Cryptocurrency
 สำหรับสร้างคริปโตไว้เพื่อให้ user ซื้อขาย หรือสำหรับการเพิ่มข้อมูลลงในฐานข้อมูล
 1. Add Cryptocurrency
     - Method POST /api/createCrypto
@@ -58,7 +58,7 @@
 3. DELETE Cryptocurrency
     - Method DELETE /api/deleteCrypto/:cryptoId
     - ลบข้อมูลคริปโต
-# Buy/Sell/Transfer Cryptocurrency
+#### Buy/Sell/Transfer Cryptocurrency
 การซื้อ ขาย และแลกเปลี่ยนจะต้องกรอก Headers: **x-access-token** และกรอก token จาก register หรือ login ก่อนเทส API
 1. Buy Cryptocurrency
     - Method POST /api/buyCrypto
